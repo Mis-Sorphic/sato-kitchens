@@ -1,0 +1,16 @@
+# Virtual environment
+backend/venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Database file (don't commit real data)
+backend/sato_kitchens.db
+
+# Environment secrets
+.env
+
+# OS junk
+.DS_Store
+Thumbs.db
