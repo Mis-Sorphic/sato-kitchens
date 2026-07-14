@@ -12,14 +12,14 @@ class UserLogin(BaseModel):
     password : str
 
 class UserOut(BaseModel):
-    id : str
+    id : int
     full_name : str
     email : EmailStr
-    phone : str
+    phone : str | None = None
     created_at :datetime
 
-class Config:
-    from_attributes = True #Lets this build automatically from a SQLAlchemy user object
+    class Config:
+        from_attributes = True #Lets this build automatically from a SQLAlchemy user object
 
 class Token(BaseModel):
     access_token : str
