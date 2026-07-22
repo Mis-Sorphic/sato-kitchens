@@ -5,10 +5,18 @@ from database import engine, get_db, Base
 import models
 import schemas
 import auth
+from fastapi.middleware.cors import CORSMiddleware
 
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title = "Sato Kitchens API")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://127.0.0.1:5500", "http://localhost:5500"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.post("/register", response_model= schemas.UserOut, status_code= status.HTTP_201_CREATED)
 def register(user: schemas.UserCreate, db: Session = Depends(get_db)):
