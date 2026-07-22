@@ -89,3 +89,44 @@ if (loginForm) {
         }
     });
 }
+
+// --- Reflect login state in the navbar, on every page ---
+async function checkAuthState() {
+    const navAuthItem = document.getElementById("navAuthItem");
+    if (!navAuthItem) return; // this page has no nav auth slot, skip
+
+    const token = localStorage.getItem("sato_token");
+    if (!token) return; // nobody's logged in, leave "Sign In" as-is
+
+    try {
+        const response = await fetch(`${API_BASE}/me`, {
+            headers: { "Authorization": `Bearer ${token}` },
+        });
+
+        if (!response.ok) {
+            // Token's expired or invalid — clean up and leave as "Sign In"
+            localStorage.removeItem("sato_token");
+            return;
+        }
+
+        const user = await response.json();
+        const firstName = user.full_name.split(" ")[0];
+
+        navAuthItem.innerHTML = `
+            <span class="nav-user">Hi, ${firstName}</span>
+            <a href="#" id="signOutLink" class="sign-out-link">Sign Out</a>
+        `;
+
+        document.getElementById("signOutLink").addEventListener("click", function (e) {
+            e.preventDefault();
+            localStorage.removeItem("sato_token");
+            window.location.href = "index.html";
+        });
+
+    } catch (err) {
+        // Backend unreachable — fail quietly, just leave "Sign In" showing
+    }
+}
+
+// Run this the moment the page's HTML is ready, on every page that loads auth.js
+document.addEventListener("DOMContentLoaded", checkAuthState);

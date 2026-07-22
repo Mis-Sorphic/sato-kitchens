@@ -398,3 +398,19 @@ body {
 .form-message.success {
     color: #1e8e3e;
 }
+
+.nav-user {
+    color: var(--gold);
+    font-size: 0.95rem;
+    margin-right: 15px;
+}
+
+.sign-out-link {
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.sign-out-link:hover {
+    color: var(--gold);
+}
