@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | Sato Kitchens</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">SATO <span class="highlight">KITCHENS</span></span>
+                <img src="images/sato-logo.png" alt="Sato Kitchens">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="login.html">Sign In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="auth-page">
+        <div class="auth-card">
+            <h1>Welcome Back</h1>
+            <p class="auth-subtitle">Sign in to your Sato Kitchens account</p>
+
+            <div id="message" class="form-message"></div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+
+                <button type="submit" class="btn-primary full-width">Sign In</button>
+            </form>
+
+            <p class="auth-switch">Don't have an account? <a href="register.html">Create one</a></p>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Sato Kitchens. All rights reserved.</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

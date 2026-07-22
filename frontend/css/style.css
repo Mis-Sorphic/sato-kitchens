@@ -308,3 +308,93 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* --- Auth pages (login/register) --- */
+.auth-page {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.auth-card {
+    background-color: white;
+    border: 1px solid #ddd6c8;
+    padding: 45px 40px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+}
+
+.auth-card h1 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.auth-subtitle {
+    color: #777;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: var(--charcoal);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.full-width {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.auth-switch {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.auth-switch a {
+    color: var(--brown);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.form-message {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    min-height: 1.2em;
+}
+
+.form-message.error {
+    color: #b3261e;
+}
+
+.form-message.success {
+    color: #1e8e3e;
+}
