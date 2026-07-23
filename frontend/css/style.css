@@ -509,3 +509,122 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* --- Cart badge in navbar --- */
+.cart-link {
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.cart-badge {
+    background-color: var(--gold);
+    color: var(--charcoal);
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 1px 6px;
+    border-radius: 10px;
+    margin-left: 2px;
+}
+
+/* --- Add to Cart button on service cards --- */
+.add-to-cart-btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--charcoal);
+    color: var(--cream);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: background-color 0.25s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--brown);
+}
+
+/* --- Cart page --- */
+.cart-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 40px;
+}
+
+.cart-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    border: 1px solid #ddd6c8;
+    padding: 15px;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-item-name {
+    flex: 1;
+    font-size: 1rem;
+}
+
+.remove-btn {
+    background: none;
+    border: 1px solid #b3261e;
+    color: #b3261e;
+    padding: 6px 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-family: inherit;
+}
+
+.remove-btn:hover {
+    background-color: #b3261e;
+    color: white;
+}
+
+.empty-cart {
+    text-align: center;
+    color: #777;
+    padding: 40px 0;
+}
+
+.empty-cart a {
+    color: var(--brown);
+    font-weight: bold;
+}
+
+.checkout-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btn-whatsapp {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebc59;
+}
