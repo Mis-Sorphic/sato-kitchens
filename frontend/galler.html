@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Sato Kitchens</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">SATO <span class="highlight">KITCHENS</span></span>
+                <img src="images/sato-logo.png" alt="Sato Kitchens">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li id="navAuthItem"><a href="login.html">Sign In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Our Work</h1>
+        <p>A look at completed projects — kitchens, bathrooms, and custom fabrication across Harare.</p>
+    </header>
+
+    <section class="gallery-section">
+        <div class="gallery-grid">
+            <div class="gallery-item" data-caption="Sage double vanity, quartz top">
+                <img src="images/gallery/vanity-sage-double.jpg" alt="Sage green double bathroom vanity with quartz countertop">
+            </div>
+            <div class="gallery-item" data-caption="Floating double vanity, oval mirrors">
+                <img src="images/gallery/vanity-floating-double.jpg" alt="Floating double bathroom vanity with oval mirrors">
+            </div>
+            <div class="gallery-item" data-caption="Commercial reception desk fabrication">
+                <img src="images/gallery/commercial-reception-desk.jpg" alt="Commercial reception desk with stone countertop">
+            </div>
+            <div class="gallery-item" data-caption="Commercial bar counter fabrication">
+                <img src="images/gallery/commercial-bar-counter.jpg" alt="Curved commercial bar counter with stone top">
+            </div>
+            <div class="gallery-item" data-caption="Kitchenette sink & countertop">
+                <img src="images/gallery/kitchenette-sink.jpg" alt="Small kitchenette sink with marble-look countertop">
+            </div>
+            <div class="gallery-item" data-caption="Custom braai area">
+                <img src="images/gallery/braai-area.jpg" alt="Outdoor braai area with stone top">
+            </div>
+            <div class="gallery-item" data-caption="Staircase fabrication">
+                <img src="images/gallery/staircase.jpg" alt="White stone staircase treads">
+            </div>
+            <div class="gallery-item" data-caption="Fireplace hearth finishing">
+                <img src="images/gallery/fireplace-hearth.jpg" alt="Granite fireplace hearth">
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox overlay: hidden by default, shown via JS on click -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+        <p id="lightbox-caption"></p>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Sato Kitchens. All rights reserved.</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
