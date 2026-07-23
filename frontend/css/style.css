@@ -628,3 +628,107 @@ body {
 .btn-whatsapp:hover {
     background-color: #1ebc59;
 }
+
+/* --- AI Assistant widget --- */
+.assistant-toggle {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--gold);
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+}
+
+.assistant-panel {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 340px;
+    max-width: 90vw;
+    max-height: 480px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.assistant-panel.open {
+    display: flex;
+}
+
+.assistant-header {
+    background-color: var(--charcoal);
+    color: var(--cream);
+    padding: 15px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.assistant-close {
+    cursor: pointer;
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+.assistant-body {
+    padding: 15px;
+    overflow-y: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.assistant-bubble {
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    max-width: 85%;
+}
+
+.assistant-bot {
+    background-color: #f0ece2;
+    align-self: flex-start;
+}
+
+.assistant-user {
+    background-color: var(--gold);
+    color: var(--charcoal);
+    align-self: flex-end;
+}
+
+.assistant-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.assistant-option-btn {
+    background-color: white;
+    border: 1px solid var(--brown);
+    color: var(--brown);
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+}
+
+.assistant-option-btn:hover {
+    background-color: var(--brown);
+    color: white;
+}
